@@ -7,8 +7,66 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    text-decoration: none;
+
 }
 
 .debug {
     outline: 1px solid red;
+}
+
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 3rem;
+    background: rgba(250, 99, 4, 0.905);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    color: #B32600;
+
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(126, 0, 0);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.nav-btns a {
+    font-size: 1.8rem;
+    color: rgb(120, 0, 0);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    border-radius: 3px;
+}
+
+.nav-btns a:hover,
+.nav-btns a.active {
+    color: rgb(255, 255, 255);
+}
+
+section {
+    padding: 3rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(120, 0, 0);
+}
+.ff{
+    font-size: 5rem ;
+    font-family: "Exile" !important;
+}
+.slogan{
+    opacity: 0.95;
+    padding: -2rem;
 }
