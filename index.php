@@ -28,6 +28,16 @@
         <h2 class="slogan">The Ultimate Junk Food Paradise!</h2>
     </section>
 
+    <div class="home-content">
+        <div class="home-data">
+            <h1 class="title-our-story">Our Story</h1>
+            <p>Founded in 2018, FRIED FRENZY started as a late-night food blog celebrating the most iconic and
+                indulgent eats. What began as a passion project quickly grew into a global community of food
+                 lovers addicted to the crunch, the melt, and the flavor explosions that only junk food can deliver.<br>
+            <b>Today, we’re more than just a website – we’re a celebration of fast food culture,
+                a hub for foodies, and a virtual menu of cravings waiting to be satisfied.</b></p>
+        </div>
+    </div>
 
 
 

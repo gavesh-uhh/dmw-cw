@@ -39,6 +39,7 @@
 
 section {
     padding: 3rem;
+    gap: 1rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -51,5 +52,25 @@ section {
 }
 .slogan{
     opacity: 0.95;
-    padding: -2rem;
+}
+.home-content{
+display: flex ;
+justify-content: center;
+align-items: center;
+
+}
+.home-data{
+    padding: 3rem;
+    display:flex;
+    max-width: 800px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(120, 0, 0);
+    background-color: #B3260050;
+    border-radius: 16px;
+    ;
+}
+.home-data > p {
+  text-align: center;
 }
