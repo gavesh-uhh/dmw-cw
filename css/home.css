@@ -157,9 +157,11 @@ section {
         font-size: 4rem;
     }
 
+
     .slogan {
         font-size: 1.3rem;
     }
+
 
     .home-data {
         padding: 1.5rem;
@@ -171,18 +173,22 @@ section {
         padding: 0.8rem;
     }
 
+
     #nav_logo {
         width: 120px;
     }
+
 
     .nav-btns a {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
     }
 
+
     .ff {
         font-size: 3.5rem;
     }
+
 
     .slogan {
         font-size: 1.2rem;
@@ -192,11 +198,12 @@ section {
         padding: 5rem 1rem;
     }
 
+
     .home-data {
         padding: 1.2rem;
     }
 
-    .home-data>p {
+    .home-data > p {
         font-size: 1rem;
     }
 }
@@ -243,7 +250,7 @@ section {
         margin: 0 0.5rem;
     }
 
-    .home-data>p {
+    .home-data > p {
         font-size: 0.9rem;
     }
 }
