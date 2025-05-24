@@ -116,11 +116,11 @@ section {
     .ff {
         font-size: 4rem;
     }
-    
+
     .slogan {
         font-size: 1.3rem;
     }
-    
+
     .home-data {
         padding: 1.5rem;
     }
@@ -130,32 +130,32 @@ section {
     .header {
         padding: 0.8rem;
     }
-    
+
     #nav_logo {
         width: 120px;
     }
-    
+
     .nav-btns a {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
     }
-    
+
     .ff {
         font-size: 3.5rem;
     }
-    
+
     .slogan {
         font-size: 1.2rem;
     }
-    
+
     section {
         padding: 5rem 1rem;
     }
-    
+
     .home-data {
         padding: 1.2rem;
     }
-    
+
     .home-data > p {
         font-size: 1rem;
     }
@@ -167,42 +167,42 @@ section {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     #nav_logo {
         width: 100px;
     }
-    
+
     .nav-btns {
         gap: 0.5rem;
     }
-    
+
     .nav-btns a {
         font-size: 1rem;
         padding: 0.3rem 0.6rem;
     }
-    
+
     .ff {
         font-size: 2.5rem;
     }
-    
+
     .slogan {
         font-size: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     section {
         padding: 2rem 1rem;
     }
-    
+
     .home-content {
         padding: 1rem;
     }
-    
+
     .home-data {
         padding: 1rem;
         margin: 0 0.5rem;
     }
-    
+
     .home-data > p {
         font-size: 0.9rem;
     }
