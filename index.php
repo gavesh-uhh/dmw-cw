@@ -8,16 +8,17 @@ include 'includes/header.php';
 <body>
     <header class="header">
         <img src="assets/logo_bg.png" id="nav_logo">
-
-        <nav class="option-btns">
-            <a href="">Products</a>
-            <a href="">Categories</a>
-            <a href="">Contact Us</a>
-        </nav>
-        <nav class="nav-btns">
-            <a href="auth/login">Login</a>
-            <a href="auth/register">Sign in</a>
-        </nav>
+        <div class="header-right">
+            <nav class="option-btns">
+                <a href="">Products</a>
+                <a href="">Categories</a>
+                <a href="">Contact Us</a>
+            </nav>
+            <nav class="nav-btns">
+                <a href="auth/login">Login</a>
+                <a href="auth/register">Sign in</a>
+            </nav>
+        </div>
     </header>
     <marquee scrollamount="10" class="marquee1">The Ultimate Junk Foods at Ultimate Price! </marquee>
     <section class="main-logo-slogan">
