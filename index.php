@@ -8,15 +8,23 @@ include 'includes/header.php';
 <body>
     <header class="header">
         <img src="assets/logo_bg.png" id="nav_logo">
+
+        <nav class="option-btns">
+            <a href="">Products</a>
+            <a href="">Categories</a>
+            <a href="">Contact Us</a>
+        </nav>
         <nav class="nav-btns">
             <a href="auth/login">Login</a>
-            <a href="auth/register">Sign Up</a>
+            <a href="auth/register">Sign in</a>
         </nav>
     </header>
+    <marquee scrollamount="10" class="marquee1">The Ultimate Junk Foods at Ultimate Price! </marquee>
     <section class="main-logo-slogan">
         <h1 class="ff">Fried Frenzy</h1>
         <h2 class="slogan">The Ultimate Junk Food Paradise!</h2>
     </section>
+
 
     <div class="home-content">
         <div class="home-data">
@@ -30,4 +38,5 @@ include 'includes/header.php';
         </div>
     </div>
 </body>
+
 </html>

@@ -20,6 +20,7 @@
     margin-bottom: 2rem;
     color: var(--primary-red);
     font-family: 'Inter', sans-serif;
+    cursor: default;
 }
 
 .error-message {
@@ -67,11 +68,11 @@
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease;
 }
 
 .login-btn:hover {
-    background-color: var(--primary-dark-red);
+    background-color: var(--primary-light-red);
 }
 
 .register-link {

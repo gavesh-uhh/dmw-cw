@@ -1,3 +1,10 @@
+body {
+    background-image: url("../assets/pngtree-junk-food-png-image_12163261.png");
+    background-color: rgba(245, 245, 245, 0.913); /* fallback for opacity */
+    background-blend-mode: lighten;
+}
+
+
 .header {
     position: static;
     top: 0;
@@ -36,26 +43,59 @@
     transform: scale(1.05);
 }
 
+.marquee1 {
+    position: static;
+    background-color: var(--primary-dark-red);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+
+}
+
 .nav-btns {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+.option-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding:0rem;
 }
 
-.nav-btns a {
+.option-btns a {
     font-size: 1.5rem;
-    color: var(--text-red);
+    color: var(--white);
     font-weight: 600;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
     border-radius: 3px;
     padding: 0.5rem 1rem;
+
+}
+.option-btns a:hover{
+    border-color: var(--white);
+}
+
+.nav-btns a {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2.4px solid var(--white);
+    background-color: var(--primary-light-red);
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
 }
 
 .nav-btns a:hover,
 .nav-btns a.active {
-    color: var(--white);
-    border-bottom-color: var(--white);
+    color: var(--primary-light-red);
+    border-color: var(--primary-light-red);
+    background-color: var(--white);
 }
 
 section {
@@ -86,7 +126,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 0rem;
     transition: 0.3s ease-in-out;
     width: 100%;
 }
@@ -106,7 +146,7 @@ section {
     margin: 0 1rem;
 }
 
-.home-data > p {
+.home-data>p {
     text-align: center;
     line-height: 1.6;
     font-size: 1.1rem;
@@ -116,11 +156,11 @@ section {
     .ff {
         font-size: 4rem;
     }
-    
+
     .slogan {
         font-size: 1.3rem;
     }
-    
+
     .home-data {
         padding: 1.5rem;
     }
@@ -130,33 +170,33 @@ section {
     .header {
         padding: 0.8rem;
     }
-    
+
     #nav_logo {
         width: 120px;
     }
-    
+
     .nav-btns a {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
     }
-    
+
     .ff {
         font-size: 3.5rem;
     }
-    
+
     .slogan {
         font-size: 1.2rem;
     }
-    
+
     section {
         padding: 5rem 1rem;
     }
-    
+
     .home-data {
         padding: 1.2rem;
     }
-    
-    .home-data > p {
+
+    .home-data>p {
         font-size: 1rem;
     }
 }
@@ -167,43 +207,43 @@ section {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     #nav_logo {
         width: 100px;
     }
-    
+
     .nav-btns {
         gap: 0.5rem;
     }
-    
+
     .nav-btns a {
         font-size: 1rem;
         padding: 0.3rem 0.6rem;
     }
-    
+
     .ff {
         font-size: 2.5rem;
     }
-    
+
     .slogan {
         font-size: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     section {
         padding: 2rem 1rem;
     }
-    
+
     .home-content {
         padding: 1rem;
     }
-    
+
     .home-data {
         padding: 1rem;
         margin: 0 0.5rem;
     }
-    
-    .home-data > p {
+
+    .home-data>p {
         font-size: 0.9rem;
     }
 }
