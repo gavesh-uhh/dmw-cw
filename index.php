@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
 
-    <title>Friend Frenzy • Home</title>
+    <title>Fried Frenzy • Home</title>
 </head>
 
 <body>
-    <header class="header">
 
-        <a href="" class="logo">Fried <span>Frenzy</span></a>
+    <header class="header">
+        <img src="assets/header Banner.png" class="banner">
+        <a href=""><img src="assets/logo  bg .png"  class="pic" alt="logo"></a>
         <nav class="nav-btns">
-            <a href="" class="active">Login</a>
+            <a href="">Login</a>
             <a href="">Sign Up</a>
         </nav>
     </header>
@@ -38,8 +39,6 @@
                 a hub for foodies, and a virtual menu of cravings waiting to be satisfied.</b></p>
         </div>
     </div>
-
-
 
 
 
