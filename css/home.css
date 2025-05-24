@@ -20,6 +20,13 @@ body {
     color: var(--primary-light-red);
 }
 
+.header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
 .header::after {
     content: "";
     position: absolute;
@@ -85,7 +92,7 @@ body {
     color: var(--white);
     font-weight: 600;
     transition: 0.3s ease;
-    border: 2.4px solid var(--white);
+    border: 2px solid var(--white);
     background-color: var(--primary-light-red);
     border-radius: 15px;
     padding: 0.5rem 1rem;
