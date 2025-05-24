@@ -3,47 +3,69 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 12% 3rem;
-    background: rgba(250, 99, 4, 0.905);
+    background: var(--primary-orange);
     backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
     z-index: 5;
-    color: #B32600;
-
+    color: var(--primary-light-red);
 }
-.banner{
-}
-.pic {
-    max-width: 250px;
-    display: block;
 
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/header_Banner.png");
+    opacity: 10%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#nav_logo {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+#nav_logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
 .nav-btns a {
-    font-size: 1.8rem;
-    color: rgb(120, 0, 0);
-    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: var(--text-red);
     font-weight: 600;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
     border-radius: 3px;
+    padding: 0.5rem 1rem;
 }
 
 .nav-btns a:hover,
 .nav-btns a.active {
-    color: rgb(255, 255, 255);
+    color: var(--white);
+    border-bottom-color: var(--white);
 }
 
 section {
-    padding: 3rem;
-    gap: 1rem;
+    padding: 5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(120, 0, 0);
+    color: var(--text-red);
+    text-align: center;
 }
 
 .ff {
@@ -51,43 +73,137 @@ section {
     font-family: "Exile" !important;
     transition: 0.4s ease-in-out;
     cursor: pointer;
-}
-
-.ff:hover {
-    color: rgb(255, 77, 0);
-
+    margin-bottom: 1rem;
 }
 
 .slogan {
     opacity: 0.95;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .home-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3S ease-in-out;
-
-}
-
-.home-content:hover {
-    transform: scale(1.1);
-
+    padding: 2rem;
+    transition: 0.3s ease-in-out;
+    width: 100%;
 }
 
 .home-data {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     max-width: 800px;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(120, 0, 0);
-    background-color: #B3260050;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
     border-radius: 16px;
-    ;
+    margin: 0 1rem;
 }
 
-.home-data>p {
+.home-data > p {
     text-align: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .ff {
+        font-size: 4rem;
+    }
+    
+    .slogan {
+        font-size: 1.3rem;
+    }
+    
+    .home-data {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0.8rem;
+    }
+    
+    #nav_logo {
+        width: 120px;
+    }
+    
+    .nav-btns a {
+        font-size: 1.2rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .ff {
+        font-size: 3.5rem;
+    }
+    
+    .slogan {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 5rem 1rem;
+    }
+    
+    .home-data {
+        padding: 1.2rem;
+    }
+    
+    .home-data > p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 0.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #nav_logo {
+        width: 100px;
+    }
+    
+    .nav-btns {
+        gap: 0.5rem;
+    }
+    
+    .nav-btns a {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .ff {
+        font-size: 2.5rem;
+    }
+    
+    .slogan {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    .home-content {
+        padding: 1rem;
+    }
+    
+    .home-data {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .home-data > p {
+        font-size: 0.9rem;
+    }
 }
