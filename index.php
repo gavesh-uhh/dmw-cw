@@ -1,7 +1,7 @@
 <html>
 <?php
 $page_title = 'Fried Frenzy • Home';
-$page_css = 'css/home.css';
+$page_css = 'home.css';
 include 'includes/header.php';
 ?>
 
