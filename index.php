@@ -1,5 +1,5 @@
-<html>
 <?php
+session_start();
 $page_title = 'Fried Frenzy • Home';
 $page_css = 'home.css';
 include 'includes/header.php';
@@ -9,8 +9,13 @@ include 'includes/header.php';
     <header class="header">
         <img src="assets/logo_bg.png" id="nav_logo">
         <nav class="nav-btns">
-            <a href="auth/login">Login</a>
-            <a href="auth/register">Sign Up</a>
+            <?php if (isset($_SESSION['user'])): ?>
+                <a href="orders">My Orders</a>
+                <a href="auth/logout">Logout</a>
+            <?php else: ?>
+                <a href="auth/login">Login</a>
+                <a href="auth/register">Sign Up</a>
+            <?php endif; ?>
         </nav>
     </header>
     <section class="main-logo-slogan">

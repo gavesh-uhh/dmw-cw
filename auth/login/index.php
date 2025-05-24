@@ -6,9 +6,11 @@ $page_css = 'login.css';
 include '../../includes/header.php';
 
 $error_message = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST["email"];
     $password = $_POST["password"];
+
 
     $stmt = $conn->prepare("SELECT user_id, password FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -17,9 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
-        if (password_verify($password, $user["password"])) {
+        if ($password === $user["password"]) {
             $_SESSION["user"] = $user;
             $_SESSION["email"] = $user["email"];
+            header("Location: ../../index.php");
             exit();
         }
     } else {
@@ -27,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 <body>
     <div class="login-container">
         <form class="login-form" action="index.php" method="POST">
