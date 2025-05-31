@@ -1,6 +1,7 @@
 body {
     background-image: url("../assets/pngtree-junk-food-png-image_12163261.png");
-    background-color: rgba(245, 245, 245, 0.913); /* fallback for opacity */
+    background-color: rgba(245, 245, 245, 0.913);
+    /* fallback for opacity */
     background-blend-mode: lighten;
 }
 
@@ -55,7 +56,7 @@ body {
     background-color: var(--primary-dark-red);
     color: var(--white);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
 }
 
@@ -66,11 +67,12 @@ body {
     padding: 1rem;
     justify-content: flex-end;
 }
-.option-btns{
+
+.option-btns {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    padding:0rem;
+    padding: 0rem;
 }
 
 .option-btns a {
@@ -83,7 +85,8 @@ body {
     padding: 0.5rem 1rem;
 
 }
-.option-btns a:hover{
+
+.option-btns a:hover {
     border-color: var(--white);
 }
 
@@ -140,17 +143,18 @@ section {
 
 .home-data {
     padding: 2rem;
-    display: flex;
+    display: contents;
     max-width: 800px;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     color: var(--text-red);
     background-color: var(--bg-transparent-red);
     border-radius: 16px;
     margin: 0 1rem;
+
 }
 
 .home-data>p {
@@ -158,6 +162,95 @@ section {
     line-height: 1.6;
     font-size: 1.1rem;
 }
+
+.pic-carousel {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    max-width: 100%;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.pics-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100;
+    display: flex;
+    width: max-content;
+    transition: 0.6s ease-in-out;
+}
+
+.pics-list img {
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-dark-red);
+    color: var(--white);
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons :hover {
+    box-shadow: 0 0 5px 3px var(--primary-orange);
+}
+
+.dots {
+    position: absolute;
+    bottom: 45px;
+    color: var(--w);
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-dark-red);
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px var(--white);
+    transition: 0.5s ease-in-out;
+
+}
+
+.dots li.acting {
+    width: 30px;
+
+
+}
+
+
+
 
 @media screen and (max-width: 1024px) {
     .ff {
@@ -176,6 +269,10 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+    .pic-carousel{
+        height: 400px;
+    }
+
     .header {
         padding: 0.8rem;
     }
@@ -210,7 +307,7 @@ section {
         padding: 1.2rem;
     }
 
-    .home-data > p {
+    .home-data>p {
         font-size: 1rem;
     }
 }
@@ -257,7 +354,15 @@ section {
         margin: 0 0.5rem;
     }
 
-    .home-data > p {
+    .home-data>p {
         font-size: 0.9rem;
     }
+
+
+
+
+
+
+
+
 }
