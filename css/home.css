@@ -1,111 +1,7 @@
 body {
-    background-image: url("../assets/pngtree-junk-food-png-image_12163261.png");
+    background-image: url("../assets/2.png");
     background-color: rgba(245, 245, 245, 0.913);
-    /* fallback for opacity */
     background-blend-mode: lighten;
-}
-
-
-.header {
-    position: static;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--primary-orange);
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    z-index: 5;
-    color: var(--primary-light-red);
-}
-
-.header-right {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-}
-
-.header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/header_Banner.png");
-    opacity: 10%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
-#nav_logo {
-    width: 150px;
-    transition: transform 0.3s ease;
-}
-
-#nav_logo:hover {
-    transform: scale(1.05);
-}
-
-.marquee1 {
-    position: static;
-    background-color: var(--primary-dark-red);
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1rem;
-
-}
-
-.nav-btns {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding: 1rem;
-    justify-content: flex-end;
-}
-
-.option-btns {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding: 0rem;
-}
-
-.option-btns a {
-    font-size: 1.5rem;
-    color: var(--white);
-    font-weight: 600;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-    border-radius: 3px;
-    padding: 0.5rem 1rem;
-
-}
-
-.option-btns a:hover {
-    border-color: var(--white);
-}
-
-.nav-btns a {
-    font-size: 1.5rem;
-    color: var(--white);
-    font-weight: 600;
-    transition: 0.3s ease;
-    border: 2px solid var(--white);
-    background-color: var(--primary-light-red);
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-}
-
-.nav-btns a:hover,
-.nav-btns a.active {
-    color: var(--primary-light-red);
-    border-color: var(--primary-light-red);
-    background-color: var(--white);
 }
 
 section {
@@ -154,7 +50,6 @@ section {
     background-color: var(--bg-transparent-red);
     border-radius: 16px;
     margin: 0 1rem;
-
 }
 
 .home-data>p {
@@ -173,26 +68,31 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .pics-list {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100;
+    height: 100%;
     display: flex;
     width: max-content;
     transition: 0.6s ease-in-out;
 }
 
-.pics-list img {
+.pics {
+    position: relative;
     width: 1200px;
     max-width: 100%;
     height: 100%;
-    object-fit: cover;
-
 }
 
+.pics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .buttons {
     position: absolute;
@@ -201,7 +101,7 @@ section {
     width: 90%;
     display: flex;
     justify-content: space-between;
-
+    z-index: 2;
 }
 
 .buttons button {
@@ -213,22 +113,26 @@ section {
     border: none;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
-.buttons :hover {
+.buttons button:hover {
+    opacity: 1;
     box-shadow: 0 0 5px 3px var(--primary-orange);
 }
 
 .dots {
     position: absolute;
-    bottom: 45px;
-    color: var(--w);
+    bottom: 20px;
     left: 0;
     width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 1rem;
+    z-index: 2;
 }
 
 .dots li {
@@ -236,63 +140,72 @@ section {
     width: 10px;
     height: 10px;
     background-color: var(--primary-dark-red);
-    margin: 20px;
     border-radius: 20px;
-    box-shadow: 0 0 0 2px var(--white);
+    box-shadow: 0 0 0 1px var(--white);
     transition: 0.5s ease-in-out;
-
+    cursor: pointer;
 }
 
 .dots li.acting {
     width: 30px;
-
-
 }
-
-
-
 
 @media screen and (max-width: 1024px) {
     .ff {
         font-size: 4rem;
     }
 
-
     .slogan {
         font-size: 1.3rem;
     }
 
-
     .home-data {
         padding: 1.5rem;
+    }
+
+    .pic-carousel {
+        width: 90%;
+        height: 500px;
+    }
+
+    .pics {
+        width: 100%;
+    }
+
+    .buttons button {
+        width: 45px;
+        height: 45px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .pic-carousel{
+    .pic-carousel {
         height: 400px;
+        width: 95%;
     }
 
-    .header {
-        padding: 0.8rem;
+    .buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
     }
 
-
-    #nav_logo {
-        width: 120px;
+    .dots {
+        bottom: 15px;
     }
 
-
-    .nav-btns a {
-        font-size: 1.2rem;
-        padding: 0.4rem 0.8rem;
+    .dots li {
+        width: 8px;
+        height: 8px;
     }
 
+    .dots li.acting {
+        width: 25px;
+    }
 
     .ff {
         font-size: 3.5rem;
     }
-
 
     .slogan {
         font-size: 1.2rem;
@@ -301,7 +214,6 @@ section {
     section {
         padding: 5rem 1rem;
     }
-
 
     .home-data {
         padding: 1.2rem;
@@ -313,23 +225,30 @@ section {
 }
 
 @media screen and (max-width: 480px) {
-    .header {
-        padding: 0.5rem;
-        flex-direction: column;
+    .pic-carousel {
+        height: 300px;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .buttons button {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .dots {
+        bottom: 10px;
         gap: 0.5rem;
     }
 
-    #nav_logo {
-        width: 100px;
+    .dots li {
+        width: 6px;
+        height: 6px;
     }
 
-    .nav-btns {
-        gap: 0.5rem;
-    }
-
-    .nav-btns a {
-        font-size: 1rem;
-        padding: 0.3rem 0.6rem;
+    .dots li.acting {
+        width: 20px;
     }
 
     .ff {
@@ -357,12 +276,4 @@ section {
     .home-data>p {
         font-size: 0.9rem;
     }
-
-
-
-
-
-
-
-
 }

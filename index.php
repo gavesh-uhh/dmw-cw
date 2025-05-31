@@ -7,16 +7,26 @@ include 'includes/header.php';
 <body>
     <script src="js/home.js" defer></script>
     <header class="header">
-        <img src="assets/logo_bg.png" id="nav_logo">
+        <img src="assets/logo-header.png" id="nav_logo">
         <div class="header-right">
+            <?php
+            if (isset($_SESSION['user'])) {
+                $user = $_SESSION['user'];
+            }
+            ?>
             <nav class="option-btns">
-                <a href="">Products</a>
-                <a href="">Categories</a>
-                <a href="">Contact Us</a>
+                <a href="products"> <i style="margin-right: 0.5rem;" class="bi bi-search"></i> Browse</a>
+                <a href=""> <i style="margin-right: 0.5rem;" class="bi bi-person-lines-fill"></i>Contact Us</a>
             </nav>
+
             <nav class="nav-btns">
-                <a href="auth/login">Login</a>
-                <a href="auth/register">Sign in</a>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <a href="orders">My Orders</a>
+                    <a class="icon" href="auth/logout"><i class="bi bi-box-arrow-right"></i></a>
+                <?php else: ?>
+                    <a href="auth/login">Login</a>
+                    <a href="auth/register">Sign up</a>
+                <?php endif; ?>
             </nav>
         </div>
     </header>
@@ -31,20 +41,19 @@ include 'includes/header.php';
         <div class="pic-carousel">
             <div class="pics-list">
                 <div class="pics">
-                    <img src="assets/Home-Pics/0172b81b-0ce7-8fd9-d08f-dfb1938fe068-1280x720.jpg">
+                    <img src="./assets/Home-Pics/1.jpg">
                 </div>
                 <div class="pics">
-                    <img src="assets/Home-Pics/20240522004316-andy-20cooks-20-20kottu-20roti-20recipe.jpg">
+                    <img src="assets/Home-Pics/2.webp">
                 </div>
                 <div class="pics">
-                    <img src="assets/Home-Pics/BA-Perfect-Pizza.webp">
+                    <img src="assets/Home-Pics/3.jpg">
                 </div>
                 <div class="pics">
-                    <img src="assets/Home-Pics/Brown_Sugar_Bacon_RECIPE_081722_38635.webp">
+                    <img src="assets/Home-Pics/4.webp">
                 </div>
                 <div class="pics">
-                    <img src="assets/Home-Pics/0172b81b-0ce7-8fd9-d08f-dfb1938fe068-1280x720.jpg">
-
+                    <img src="assets/Home-Pics/5.webp">
                 </div>
             </div>
             <!--Buttons < & > -->
