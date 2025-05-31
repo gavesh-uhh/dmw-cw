@@ -173,6 +173,9 @@ section {
     height: auto;
     border-radius: 28px;
 }
+.card-details{
+    padding: 1rem;
+}
 
 .card-btn{
     text-decoration: none;
@@ -228,10 +231,13 @@ section {
     text-align: center;
 }
 
-
-
-
-
+/*footer*/
+footer{
+    background-color: var(--primary-dark-red);
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+}
 
 
 
