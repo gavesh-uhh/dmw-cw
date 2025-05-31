@@ -19,45 +19,15 @@ section {
     font-family: "Exile" !important;
     transition: 0.4s ease-in-out;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .slogan {
     opacity: 0.95;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
-
-.home-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem;
-    transition: 0.3s ease-in-out;
-    width: 100%;
-}
-
-.home-data {
-    padding: 2rem;
-    display: contents;
-    max-width: 800px;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    color: var(--text-red);
-    background-color: var(--bg-transparent-red);
-    border-radius: 16px;
-    margin: 0 1rem;
-}
-
-.home-data>p {
-    text-align: center;
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
-
+/*Picture Carousel*/
 .pic-carousel {
     display: flex;
     align-items: center;
@@ -144,11 +114,128 @@ section {
     box-shadow: 0 0 0 1px var(--white);
     transition: 0.5s ease-in-out;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 .dots li.acting {
     width: 30px;
 }
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.home-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    margin: 4rem 1rem;
+}
+
+.home-data>p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/*Cards Layout of signature Dishes*/
+.card-set{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.Card{
+    width: 330px;
+    height: 500px;
+    background-color: var(--bg-transparent-red);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 3px 2px var(--primary-orange);
+    margin: 20px;
+    text-align: center;
+}
+.Card img{
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+}
+
+.card-btn{
+    text-decoration: none;
+    padding: 5px;
+    background-color:var(--primary-dark-red) ;
+    color: var(--white);
+    border: 5px solid transparent;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+/*wordings of fun fact & Our story, Satisfy*/
+.fun-fact1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    margin: 4rem 1rem;
+    text-align: center;
+}
+
+.wordings-jf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fun-fact2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    margin: 4rem 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
     .ff {
@@ -159,8 +246,16 @@ section {
         font-size: 1.3rem;
     }
 
+    .wordings-jf {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .home-data {
         padding: 1.5rem;
+
     }
 
     .pic-carousel {
@@ -183,6 +278,14 @@ section {
         height: 400px;
         width: 95%;
     }
+
+    .wordings-jf {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     .buttons button {
         width: 40px;
@@ -235,6 +338,13 @@ section {
         width: 35px;
         height: 35px;
         font-size: 0.8rem;
+    }
+
+    .wordings-jf {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .dots {
