@@ -56,6 +56,9 @@ include 'includes/header.php';
                 <div class="pics">
                     <img src="assets/Home-Pics/5.webp">
                 </div>
+                <div class="pics">
+                    <img src="assets/Home-Pics/6.webp">
+                </div>
             </div>
             <!--Buttons < & > -->
             <div class="buttons">
@@ -69,7 +72,7 @@ include 'includes/header.php';
                 <li></li>
                 <li></li>
                 <li></li>
-
+                <li></li>
             </ul>
         </div>
     </div>
@@ -80,43 +83,89 @@ include 'includes/header.php';
             <div class="Card">
                 <img src="assets/01.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 01</h3>
+                    <h3>Cheesy Sausy Burger</h3>
                     <p>
-                        Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
-                    </p>
-                    <a href="" class="card-btn">Order</a>
+                        Triple-stacked beef patties with melted American cheese, crispy bacon, lettuce, tomato, and our special sauce on a toasted brioche bun. Not for the faint of heart! </p>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/02.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 02</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>Classic Italian Pepperoni Pizza</h3>
+                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of Hand-tossed dough topped with our homemade marinara sauce, premium mozzarella cheese, and generous pepperoni slices. Baked to perfection in our stone oven.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/03.webp">
                 <div class="card-details">
-                    <h3>Signature Dish 03</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>Loaded Lobster Bun</h3>
+                    <p>Succulent lobster chunks tossed in creamy dressing, served on a toasted buttery bun, finished with a sprinkle of herbs. Taste the ocean in every soft, savory bite.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/04.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 04</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>The Taco Trio</h3>
+                    <p>A triple threat of soft tacos filled with marinated meat, zesty onions, and tangy sauce – this dish is bold, vibrant, and bursting with personality.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="gallery-section">
+        <h1 style="text-align: center;">Fried Frenzy's Famous Dish Gallery</h1>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="assets/Home-Pics/2.webp">
+                <div class="gallery-overlay">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Golden-brown perfection with our secret blend of 11 herbs and spices. Crispy on the outside, juicy on the inside.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="assets/3.jpeg">
+                <div class="gallery-overlay">
+                    <h3>Classic Pepperoni Pizza</h3>
+                    <p>Hand-tossed dough topped with our homemade marinara sauce, premium mozzarella cheese, and generous pepperoni slices. Baked to perfection in our stone oven.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="assets/01.jpg">
+                <div class="gallery-overlay">
+                    <h3>Cheesy Sausy Burger</h3>
+                    <p>Triple-stacked beef patties with melted American cheese, crispy bacon, lettuce, tomato, and our special sauce on a toasted brioche bun. Not for the faint of heart!</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="assets/04.jpg">
+                <div class="gallery-overlay">
+                    <h3>Fiesta Chicken Tacos</h3>
+                    <p>Three soft flour tortillas filled with seasoned grilled chicken, fresh lettuce, diced tomatoes, cheese, and cilantro lime crema. Served with salsa and lime wedges.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="assets/6.jpg" alt="BBQ Wings">
+                <div class="gallery-overlay">
+                    <h3>Crispy Chicken Deluxe</h3>
+                    <p>Buttermilk fried chicken breast with lettuce, tomato, pickles, and garlic aioli on a toasted artisan bun. Served with golden fries.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="assets/Home-Pics/6.webp">
+                <div class="gallery-overlay">
+                    <h3>Italian Garden Spaghetti</h3>
+                    <p>Al dente spaghetti tossed in aromatic garlic olive oil with fresh cherry tomatoes, basil leaves, and Italian herbs. Light yet flavorful - a perfect balance of simplicity and taste</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="wordings-jf">

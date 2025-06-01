@@ -237,7 +237,6 @@ section {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-
 }
 
 .gallery-section > h1 {
@@ -245,7 +244,6 @@ section {
     font-family: 'Exile', sans-serif;
     letter-spacing: 3px;
     text-decoration: underline;
-    text-align: center;
 }
 
 .gallery-grid {
@@ -356,7 +354,6 @@ section {
     text-align: center;
 }
 
-
 /*footer*/
 footer{
     background-color: var(--primary-dark-red);
@@ -423,10 +420,6 @@ footer a:hover {
     .gallery-card {
         height: 260px;
     }
-    .gallery-section >h1{
-        text-align: center;
-    }
-
 }
 
 
