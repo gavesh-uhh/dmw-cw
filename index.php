@@ -75,43 +75,47 @@ include 'includes/header.php';
     </div>
 
     <div class="featured-dishes">
-        <h1>Featured</h1>
+        <h1>Our Signature Dishes</h1>
         <div class="card-set">
             <div class="Card">
                 <img src="assets/01.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 01</h3>
+                    <h3>Cheesy Sausy Burger</h3>
                     <p>
-                        Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                        <i>Double the Beef. Triple the Cheese. Infinite Cravings.</i><br><br>
+                        Dive into this juicy monster loaded with melted cheddar, smoky beef patties, and dripping house-made sauce. this is a meltdown of flavor in every bite!
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/02.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 02</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>Pepperoni Pizza Perfection</h3>
+                    <p>
+                        <i>Where Crispy Crust Meets Cheesy Dreams</i><br><br>Our iconic Italian-style crust topped with a river of mozzarella and sizzling pepperoni slices. It’s crispy, cheesy, and 100% unforgettable.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/03.webp">
                 <div class="card-details">
-                    <h3>Signature Dish 03</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>Loaded Lobster Roll</h3>
+                    <p>
+                        <i>Luxury Meets Street Food</i><br><br>Succulent lobster chunks tossed in creamy dressing, served on a toasted buttery bun, finished with a sprinkle of herbs. Taste the ocean in every soft, savory bite.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
             <div class="Card">
                 <img src="assets/04.jpg">
                 <div class="card-details">
-                    <h3>Signature Dish 04</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    <h3>Spicy Taco Trio</h3>
+                    <p>
+                        <i>Fiery. Flavorful. Frenzy-Worthy.</i><br><br>A triple threat of soft tacos filled with marinated meat, zesty onions, and tangy sauce – this dish is bold, vibrant, and bursting with personality.
                     </p>
-                    <a href="" class="card-btn">Order</a>
+                    <a href="products/index.php" class="card-btn">Order</a>
                 </div>
             </div>
         </div>
@@ -144,7 +148,7 @@ include 'includes/header.php';
         </div>
     </div>
     <footer>
-        <h3 class="copy-right">&copy; Made By Gavesh | Timesh | Siluna | Yashan • All Rights Recei</h3>
+        <h3 class="copy-right">&copy; Made By Gavesh | Timesh | Siluna | Yashan • All Rights Received</h3>
     </footer>
 </body>
 
