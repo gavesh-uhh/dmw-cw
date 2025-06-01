@@ -35,7 +35,7 @@ $error_message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 
             <p><?php echo $error_message; ?></p>
             <div class="error-actions">
                 <a href="<?php echo getRootPath('index.php'); ?>" class="btn">Return Home</a>
-                <a href="javascript:history.back()" class="btn">Try Again</a>
+                <a href="<?php echo getRootPath(path: 'browse'); ?>" class="btn">Try Again</a>
             </div>
         </div>
     </div>

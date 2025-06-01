@@ -145,6 +145,10 @@ include 'includes/header.php';
     </div>
     <footer>
         <h3 class="copy-right">&copy; Made By Gavesh | Timesh | Siluna | Yashan • All Rights Recei</h3>
+        <hr style="opacity: 50%; margin: 1rem 0;">
+        <div class="footer-links">
+            <a href="<?php echo getRootPath('admin'); ?>">Admin Login</a>
+        </div>
     </footer>
 </body>
 

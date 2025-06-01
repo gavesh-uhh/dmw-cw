@@ -3,7 +3,8 @@ session_start();
 require_once '../includes/db_connect.php';
 header('Content-Type: application/json');
 
-function sendResponse($success, $message, $data = []) {
+function sendResponse($success, $message, $data = [])
+{
     echo json_encode([
         'success' => $success,
         'message' => $message,
@@ -26,7 +27,8 @@ if (!isset($_POST['address']) || !isset($_POST['phone'])) {
 
 $cart = json_decode($_POST['cart'] ?? '{}', true);
 if (empty($cart)) {
-    sendResponse(false, 'Your cart is empty');
+    header('Location: order_failed.php?message=' . urlencode('Your cart is empty'));
+    exit();
 }
 
 $user_id = $_SESSION['user']['user_id'];
@@ -39,28 +41,28 @@ try {
 
     $product_ids = array_keys($cart);
     $placeholders = str_repeat('?,', count($product_ids) - 1) . '?';
-    
+
     $stmt = $conn->prepare("
         SELECT product_id, name, price, current_stock 
         FROM products 
         WHERE product_id IN ($placeholders)
     ");
-    
+
     if (!$stmt) {
         throw new Exception("Failed to prepare product query: " . $conn->error);
     }
-    
+
     $stmt->bind_param(str_repeat('i', count($product_ids)), ...$product_ids);
     $stmt->execute();
     $result = $stmt->get_result();
-    
+
     $products = [];
     $total_price = 0;
     $out_of_stock = [];
-    
+
     while ($product = $result->fetch_assoc()) {
         $quantity = $cart[$product['product_id']];
-        
+
         if ($product['current_stock'] < $quantity) {
             $out_of_stock[] = [
                 'name' => $product['name'],
@@ -68,11 +70,11 @@ try {
                 'requested' => $quantity
             ];
         }
-        
+
         $products[$product['product_id']] = $product;
         $total_price += $product['price'] * $quantity;
     }
-    
+
     if (!empty($out_of_stock)) {
         $message = "Some items are out of stock:\n";
         foreach ($out_of_stock as $item) {
@@ -80,7 +82,7 @@ try {
         }
         throw new Exception($message);
     }
-    
+
     $stmt = $conn->prepare("
         INSERT INTO orders (
             user_id, 
@@ -91,18 +93,18 @@ try {
             delivery_notes
         ) VALUES (?, ?, 'Pending', ?, ?, ?)
     ");
-    
+
     if (!$stmt) {
         throw new Exception("Failed to prepare order query: " . $conn->error);
     }
-    
+
     $stmt->bind_param("idsss", $user_id, $total_price, $phone, $address, $notes);
     if (!$stmt->execute()) {
         throw new Exception("Failed to execute order query: " . $stmt->error);
     }
-    
+
     $order_id = $conn->insert_id;
-    
+
     $stmt = $conn->prepare("
         INSERT INTO order_item (
             order_id, 
@@ -111,42 +113,42 @@ try {
             price_at_order_time
         ) VALUES (?, ?, ?, ?)
     ");
-    
+
     if (!$stmt) {
         throw new Exception("Failed to prepare order items query: " . $conn->error);
     }
-    
+
     $stock_stmt = $conn->prepare("
         UPDATE products 
         SET current_stock = current_stock - ? 
         WHERE product_id = ?
     ");
-    
+
     if (!$stock_stmt) {
         throw new Exception("Failed to prepare stock update query: " . $conn->error);
     }
-    
+
     foreach ($cart as $product_id => $quantity) {
         $product = $products[$product_id];
-        
+
         $stmt->bind_param("iiid", $order_id, $product_id, $quantity, $product['price']);
         if (!$stmt->execute()) {
             throw new Exception("Failed to insert order item: " . $stmt->error);
         }
-        
+
         $stock_stmt->bind_param("ii", $quantity, $product_id);
         if (!$stock_stmt->execute()) {
             throw new Exception("Failed to update stock: " . $stock_stmt->error);
         }
     }
-    
+
     $conn->commit();
     sendResponse(true, 'Order placed successfully', ['order_id' => $order_id]);
-    
+
 } catch (Exception $e) {
     if ($conn->connect_errno === 0) {
         $conn->rollback();
     }
     error_log("Order processing error: " . $e->getMessage());
     sendResponse(false, $e->getMessage());
-} 
+}

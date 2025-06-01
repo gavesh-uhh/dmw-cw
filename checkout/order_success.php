@@ -41,7 +41,7 @@ $order_id = $_GET['order_id'];
             <p>We'll start preparing your order right away.</p>
             <div class="success-actions">
                 <a href="../index.php" class="btn">Continue Shopping</a>
-                <a href="orders" class="btn">View Orders</a>
+                <a href="<?php echo getRootPath(path: 'products'); ?>" class="btn">Browse</a>
             </div>
         </div>
     </div>

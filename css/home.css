@@ -276,6 +276,14 @@ footer{
     padding: 12px;
 }
 
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 1024px) {
     .ff {
         font-size: 4rem;
