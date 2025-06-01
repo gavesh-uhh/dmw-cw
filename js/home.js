@@ -13,7 +13,6 @@ function initSlider() {
     });
 }
 
-window.addEventListener('load', initSlider);
 
 next.onclick = function() {
     if (active + 1 > lengthItems) {

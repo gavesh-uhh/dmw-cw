@@ -5,7 +5,7 @@ body {
 }
 
 section {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,45 +19,15 @@ section {
     font-family: "Exile" !important;
     transition: 0.4s ease-in-out;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .slogan {
     opacity: 0.95;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
-
-.home-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem;
-    transition: 0.3s ease-in-out;
-    width: 100%;
-}
-
-.home-data {
-    padding: 2rem;
-    display: contents;
-    max-width: 800px;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    color: var(--text-red);
-    background-color: var(--bg-transparent-red);
-    border-radius: 16px;
-    margin: 0 1rem;
-}
-
-.home-data>p {
-    text-align: center;
-    line-height: 1.6;
-    font-size: 1.1rem;
-}
-
+/*Picture Carousel*/
 .pic-carousel {
     display: flex;
     align-items: center;
@@ -144,10 +114,166 @@ section {
     box-shadow: 0 0 0 1px var(--white);
     transition: 0.5s ease-in-out;
     cursor: pointer;
+    opacity: 0.5;
 }
 
 .dots li.acting {
     width: 30px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.home-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    margin: 4rem 1rem;
+}
+
+.home-data>p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.featured-dishes {
+    margin-top: 50px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.featured-dishes > h1 {
+    color: var(--text-red);
+    font-family: 'Exile', sans-serif;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+/*Cards Layout of signature Dishes*/
+.card-set{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Card {
+    width: 330px;
+    height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-details {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details > p {
+    margin-top: 1rem;
+}
+
+.card-btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-dark-red);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    margin-top: auto;
+}
+
+.card-btn:hover {
+    background-color: var(--primary-light-red);
+}
+
+/*wordings of fun fact & Our story, Satisfy*/
+.fun-fact1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    text-align: center;
+}
+
+.wordings-jf {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fun-fact2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-red);
+    background-color: var(--bg-transparent-red);
+    border-radius: 16px;
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    background-color: var(--primary-dark-red);
+    color: #ffffff80;
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 12px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -159,8 +285,14 @@ section {
         font-size: 1.3rem;
     }
 
+    .wordings-jf {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     .home-data {
         padding: 1.5rem;
+        margin: 6rem 1rem;
     }
 
     .pic-carousel {
@@ -176,12 +308,26 @@ section {
         width: 45px;
         height: 45px;
     }
+
+    .card-set {
+        margin-top: 50px;
+    }
+
+    .Card {
+        width: 300px;
+        height: 480px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .pic-carousel {
         height: 400px;
         width: 95%;
+    }
+
+    .wordings-jf {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .buttons button {
@@ -212,15 +358,31 @@ section {
     }
 
     section {
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
     }
 
     .home-data {
         padding: 1.2rem;
+        margin: 1.5rem 0.5rem;
     }
 
-    .home-data>p {
+    .home-data > p {
         font-size: 1rem;
+    }
+
+    .card-set {
+        margin-top: 30px;
+        gap: 1rem;
+    }
+
+    .Card {
+        width: 280px;
+        height: 460px;
+        margin: 10px;
+    }
+
+    .Card img {
+        height: 180px;
     }
 }
 
@@ -235,6 +397,11 @@ section {
         width: 35px;
         height: 35px;
         font-size: 0.8rem;
+    }
+
+    .wordings-jf {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .dots {
@@ -257,23 +424,49 @@ section {
 
     .slogan {
         font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    section {
-        padding: 2rem 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .home-content {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .home-data {
         padding: 1rem;
-        margin: 0 0.5rem;
+        margin: 1rem 0.5rem;
     }
 
-    .home-data>p {
+    .home-data > p {
         font-size: 0.9rem;
     }
+
+    .card-set {
+        margin-top: 20px;
+        gap: 0.5rem;
+    }
+
+    .Card {
+        width: 100%;
+        max-width: 300px;
+        height: 440px;
+        margin: 10px auto;
+    }
+
+    .Card img {
+        height: 160px;
+    }
+
+    .card-details {
+        padding: 1rem;
+    }
+
+    .card-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .wordings-jf {
+        justify-content: start;
+    }
+
 }
