@@ -120,6 +120,36 @@ include 'includes/header.php';
             </div>
         </div>
     </div>
+    <div class="gallery">
+        <h2 class="title-gallery">Most Famous Frenzy Dishes</h2>
+        <div class="photo-set">
+            <div class="photo">
+                <img src="assets/10.webp">
+                <div class="des">
+                    <h2> Garlic Butter Spaghetti</h2><br>
+                    <p>A golden swirl of spaghetti tossed in rich garlic butter and herbs.</p>
+                </div>
+            </div>
+
+            <div class="photo">
+                <img src="assets/12.webp">
+                <div class="des">
+                    <h2> Creamy Tomato Penne</h2><br>
+                    <p>This pasta smothered in a luscious tomato cream sauce with a spicy twist.</p>
+                </div>
+            </div>
+
+             <div class="photo">
+                <img src="assets/Home-Pics/3.jpg">
+                <div class="des">
+                    <h2> Sri Lankan Kottu</h2><br>
+                    <p>Chopped flatbread stir-fried with spicy curry, veggies, and eggs.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 
 
 

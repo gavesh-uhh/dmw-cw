@@ -27,6 +27,7 @@ section {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
 /*Picture Carousel*/
 .pic-carousel {
     display: flex;
@@ -161,7 +162,7 @@ section {
     gap: 1rem;
 }
 
-.featured-dishes > h1 {
+.featured-dishes>h1 {
     color: var(--text-red);
     font-family: 'Exile', sans-serif;
     letter-spacing: 3px;
@@ -169,11 +170,12 @@ section {
 }
 
 /*Cards Layout of signature Dishes*/
-.card-set{
+.card-set {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .Card {
     width: 330px;
     height: 500px;
@@ -207,7 +209,7 @@ section {
     flex-direction: column;
 }
 
-.card-details > p {
+.card-details>p {
     margin-top: 1rem;
 }
 
@@ -227,6 +229,114 @@ section {
 .card-btn:hover {
     background-color: var(--primary-light-red);
 }
+
+/*gallery*/
+.title-gallery {
+    color: var(--primary-dark-red);
+    text-decoration: underline;
+    font-family: exile;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.photo-set {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 320px;
+    height: 400px;
+    background: white;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.photo:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+.photo:hover img {
+    transform: scale(1.1);
+}
+
+.des {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+    transform: translateY(20px);
+    text-align: center;
+}
+
+.photo:hover .des {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.des h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+.photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.photo:hover::before {
+    opacity: 1;
+}
+
+
 
 /*wordings of fun fact & Our story, Satisfy*/
 .fun-fact1 {
@@ -268,7 +378,7 @@ section {
 }
 
 /*footer*/
-footer{
+footer {
     background-color: var(--primary-dark-red);
     color: #ffffff80;
     text-align: center;
@@ -366,7 +476,7 @@ footer{
         margin: 1.5rem 0.5rem;
     }
 
-    .home-data > p {
+    .home-data>p {
         font-size: 1rem;
     }
 
@@ -436,7 +546,7 @@ footer{
         margin: 1rem 0.5rem;
     }
 
-    .home-data > p {
+    .home-data>p {
         font-size: 0.9rem;
     }
 
