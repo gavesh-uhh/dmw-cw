@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page_title = 'Fried Frenzy • Login';
+$page_title = 'Fried Frenzy • Discover';
 $page_css = 'products.css';
 include '../includes/header.php';
 include '../includes/get_products.php';
