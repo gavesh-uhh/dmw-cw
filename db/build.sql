@@ -153,11 +153,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-<<<<<<< HEAD
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-=======
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
->>>>>>> 496513a508232b09ac857ab01e1c8dff565c7157
 
 --
 -- AUTO_INCREMENT for table `order_item`
@@ -185,11 +181,7 @@ ALTER TABLE `users`
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-<<<<<<< HEAD
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
-=======
-  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
->>>>>>> 496513a508232b09ac857ab01e1c8dff565c7157
 
 --
 -- Constraints for table `order_item`
