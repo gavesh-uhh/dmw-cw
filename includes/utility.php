@@ -73,15 +73,11 @@ function isNumeric($string) {
 }
 
 function getRootPath($path = '') {
-    $root = $_SERVER['DOCUMENT_ROOT'];
     $scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
+    $root = $_SERVER['DOCUMENT_ROOT'];
     $relativePath = str_replace($root, '', $scriptDir);
     $relativePath = trim($relativePath, '/');
-    if ($relativePath) {
-        $basePath = '/' . $relativePath;
-    } else {
-        $basePath = '';
-    }
+    $depth = substr_count($relativePath, '/');
     $path = trim($path, '/');
-    return $basePath . ($path ? '/' . $path : '');
+    return str_repeat('../', $depth) . $path;
 }
