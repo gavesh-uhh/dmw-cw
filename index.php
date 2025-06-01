@@ -74,37 +74,45 @@ include 'includes/header.php';
         </div>
     </div>
 
-    <div class="card-set">
-        <div class="Card">
-            <img src="assets/01.jpg">
-            <div class="card-details">
-                <h3>Signature Dish 01</h3>
-                <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza </p>
-                <a href="" class="card-btn">Order</a>
+    <div class="featured-dishes">
+        <h1>Featured</h1>
+        <div class="card-set">
+            <div class="Card">
+                <img src="assets/01.jpg">
+                <div class="card-details">
+                    <h3>Signature Dish 01</h3>
+                    <p>
+                        Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    </p>
+                    <a href="" class="card-btn">Order</a>
+                </div>
             </div>
-        </div>
-        <div class="Card">
-            <img src="assets/02.jpg">
-            <div class="card-details">
-                <h3>Signature Dish 02</h3>
-                <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza </p>
-                <a href="" class="card-btn">Order</a>
+            <div class="Card">
+                <img src="assets/02.jpg">
+                <div class="card-details">
+                    <h3>Signature Dish 02</h3>
+                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    </p>
+                    <a href="" class="card-btn">Order</a>
+                </div>
             </div>
-        </div>
-        <div class="Card">
-            <img src="assets/03.webp">
-            <div class="card-details">
-                <h3>Signature Dish 03</h3>
-                <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza </p>
-                <a href="" class="card-btn">Order</a>
+            <div class="Card">
+                <img src="assets/03.webp">
+                <div class="card-details">
+                    <h3>Signature Dish 03</h3>
+                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    </p>
+                    <a href="" class="card-btn">Order</a>
+                </div>
             </div>
-        </div>
-        <div class="Card">
-            <img src="assets/04.jpg">
-            <div class="card-details">
-                <h3>Signature Dish 04</h3>
-                <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza </p>
-                <a href="" class="card-btn">Order</a>
+            <div class="Card">
+                <img src="assets/04.jpg">
+                <div class="card-details">
+                    <h3>Signature Dish 04</h3>
+                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
+                    </p>
+                    <a href="" class="card-btn">Order</a>
+                </div>
             </div>
         </div>
     </div>
@@ -115,7 +123,8 @@ include 'includes/header.php';
         <div class="fun-fact1">
             <h1> Fun Fact </h1>
             <h2>The Invention of Potato Chips Was an Accident </h2>
-            <p>In 1853, a chef named George Crum sliced potatoes extra thin to annoy a complaining customer. After that the customer Surprised. The customer loved it. and thats how chips were born.</p>
+            <p>In 1853, a chef named George Crum sliced potatoes extra thin to annoy a complaining customer. After that
+                the customer Surprised. The customer loved it. and thats how chips were born.</p>
         </div>
         <div class="home-data">
             <h1 class="title-our-story">Our Story</h1>
@@ -129,7 +138,9 @@ include 'includes/header.php';
         <div class="fun-fact2">
             <h1> Satisfy Your Cravings </h1>
             <h2>One Bite at a Time! </h2>
-            <p>Junk food isn’t just a snack! <br>it’s an experience. That moment when you unwrap a hot burger, pop open a soda, and grab a side of golden fries… it's like emotion.<b> Whether you’re a pizza purist or a dessert devourer, FRIED FRENZY has something that speaks your flavor language.</b></p>
+            <p>Junk food isn’t just a snack! <br>it’s an experience. That moment when you unwrap a hot burger, pop open
+                a soda, and grab a side of golden fries… it's like emotion.<b> Whether you’re a pizza purist or a
+                    dessert devourer, FRIED FRENZY has something that speaks your flavor language.</b></p>
         </div>
     </div>
     <footer>
