@@ -33,7 +33,6 @@
     padding: 4rem 2rem;
     background: white;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     max-width: 500px;
     margin: 0 auto;
     transform: translateY(0);
@@ -90,12 +89,10 @@
     overflow: hidden;
     transition: all 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    animation: slideIn 0.5s ease-out forwards;
-    opacity: 0;
+    opacity: 1;
 }
 
 .order-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -279,20 +276,3 @@
         align-self: flex-start;
     }
 }
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.orders-list .order-card:nth-child(1) { animation-delay: 0.1s; }
-.orders-list .order-card:nth-child(2) { animation-delay: 0.2s; }
-.orders-list .order-card:nth-child(3) { animation-delay: 0.3s; }
-.orders-list .order-card:nth-child(4) { animation-delay: 0.4s; }
-.orders-list .order-card:nth-child(5) { animation-delay: 0.5s; } 

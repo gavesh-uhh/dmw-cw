@@ -12,8 +12,8 @@ $error_message = isset($_GET['message']) ? htmlspecialchars($_GET['message']) : 
         <img src="../assets/logo-header.png" id="nav_logo">
         <div class="header-right">
             <nav class="option-btns">
-                <a href="../index.php"> <i style="margin-right: 0.5rem;" class="bi bi-house"></i> Home</a>
-                <a href=""> <i style="margin-right: 0.5rem;" class="bi bi-person-lines-fill"></i>Contact Us</a>
+                <a href="../index.php"><i class="bi bi-house"></i> Home</a>
+                <a href="<?php echo getRootPath('contact'); ?>"><i class="bi bi-person-lines-fill"></i>Contact Us</a>
             </nav>
 
             <nav class="nav-btns">

@@ -82,6 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul class="admin-nav-links">
                 <li><a href="dashboard.php"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
                 <li class="active"><a href="add_item.php"><i class="bi bi-plus-circle"></i> Add Item</a></li>
+                <li><a href="delete_item.php"><i class="bi bi-trash"></i> Delete Item</a></li>
+                <li><a href="feedback.php"><i class="bi bi-chat-dots"></i> View Feedback</a></li>
                 <li><a href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
             </ul>
         </nav>

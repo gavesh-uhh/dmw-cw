@@ -516,4 +516,103 @@ th {
     .btn-secondary {
         width: 100%;
     }
+}
+
+.btn-danger {
+    padding: 0.5rem 0.75rem;
+    background: var(--primary-light-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+    background: var(--primary-red);
+
+}
+
+.btn-danger i {
+    font-size: 1rem;
+}
+
+.delete-form {
+    margin: 0;
+    display: inline-block;
+}
+
+.feedback-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.feedback-header {
+    background: var(--primary-orange);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.feedback-email, .feedback-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.feedback-id {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.feedback-content {
+    padding: 1rem;
+    color: var(--black);
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+.feedback-footer {
+    padding: 1rem;
+}
+
+.feedback-footer > .feedback-email {
+    opacity: 50%;
+}
+
+.no-feedback {
+    text-align: center;
+    color: var(--text-red);
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .feedback-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .feedback-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
 } 

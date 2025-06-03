@@ -3,7 +3,8 @@ session_start();
 $page_title = 'Fried Frenzy • Home';
 $page_css = 'home.css';
 include 'includes/header.php';
-?>
+include 'includes/db_connect.php'
+    ?>
 
 <body>
     <script src="js/home.js" defer></script>
@@ -16,8 +17,8 @@ include 'includes/header.php';
             }
             ?>
             <nav class="option-btns">
-                <a href="products"> <i style="margin-right: 0.5rem;" class="bi bi-search"></i> Browse</a>
-                <a href=""> <i style="margin-right: 0.5rem;" class="bi bi-person-lines-fill"></i>Contact Us</a>
+                <a href="products"><i class="bi bi-search"></i> Browse</a>
+                <a href="contact"><i class="bi bi-person-lines-fill"></i>Contact Us</a>
             </nav>
 
             <nav class="nav-btns">
@@ -69,7 +70,6 @@ include 'includes/header.php';
                 <li></li>
                 <li></li>
                 <li></li>
-
             </ul>
         </div>
     </div>
@@ -77,43 +77,29 @@ include 'includes/header.php';
     <div class="featured-dishes">
         <h1>Featured</h1>
         <div class="card-set">
-            <div class="Card">
-                <img src="assets/01.jpg">
-                <div class="card-details">
-                    <h3>Signature Dish 01</h3>
-                    <p>
-                        Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
-                    </p>
-                    <a href="" class="card-btn">Order</a>
-                </div>
-            </div>
-            <div class="Card">
-                <img src="assets/02.jpg">
-                <div class="card-details">
-                    <h3>Signature Dish 02</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
-                    </p>
-                    <a href="" class="card-btn">Order</a>
-                </div>
-            </div>
-            <div class="Card">
-                <img src="assets/03.webp">
-                <div class="card-details">
-                    <h3>Signature Dish 03</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
-                    </p>
-                    <a href="" class="card-btn">Order</a>
-                </div>
-            </div>
-            <div class="Card">
-                <img src="assets/04.jpg">
-                <div class="card-details">
-                    <h3>Signature Dish 04</h3>
-                    <p>Italin Crust pizza is FRIED FRENZY's Signature because of people's love for this delicious pizza
-                    </p>
-                    <a href="" class="card-btn">Order</a>
-                </div>
-            </div>
+            <?php
+            $stmt = $conn->prepare("SELECT * FROM products LIMIT 4");
+            if (!$stmt) {
+                error_log("Prepare failed: " . $conn->error);
+                echo '<p class="error">Unable to load products. Please try again later.</p>';
+            } else {
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                while ($product = $result->fetch_assoc()): ?>
+                    <div class="Card">
+                        <img src="data:image/jpeg;base64,<?php echo base64_encode($product['image_path']); ?>"
+                            alt="<?php echo htmlspecialchars($product['name']); ?>">
+                        <div class="card-details">
+                            <h3><?php echo htmlspecialchars($product['name']); ?></h3>
+                            <p><?php echo htmlspecialchars($product['description']); ?></p>
+                            <a href="<?php echo getRootPath('products'); ?>" class="card-btn">Order</a>
+                        </div>
+                    </div>
+                <?php endwhile;
+                $stmt->close();
+            }
+            ?>
         </div>
     </div>
 
@@ -131,15 +117,15 @@ include 'includes/header.php';
             <p>Founded in 2018, FRIED FRENZY started as a late-night food blog celebrating the most iconic and
                 indulgent eats. What began as a passion project quickly grew into a global community of food
                 lovers addicted to the crunch, the melt, and the flavor explosions that only junk food can deliver.<br>
-                <b>Today, we're more than just a website – we're a celebration of fast food culture,
+                <b>Today, we're more than just a website - we're a celebration of fast food culture,
                     a hub for foodies, and a virtual menu of cravings waiting to be satisfied.</b>
             </p>
         </div>
         <div class="fun-fact2">
             <h1> Satisfy Your Cravings </h1>
             <h2>One Bite at a Time! </h2>
-            <p>Junk food isn’t just a snack! <br>it’s an experience. That moment when you unwrap a hot burger, pop open
-                a soda, and grab a side of golden fries… it's like emotion.<b> Whether you’re a pizza purist or a
+            <p>Junk food isn't just a snack! <br>it's an experience. That moment when you unwrap a hot burger, pop open
+                a soda, and grab a side of golden fries… it's like emotion.<b> Whether you're a pizza purist or a
                     dessert devourer, FRIED FRENZY has something that speaks your flavor language.</b></p>
         </div>
     </div>

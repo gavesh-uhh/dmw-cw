@@ -13,7 +13,7 @@ require_once '../includes/db_connect.php';
 
 $user_id = $_SESSION['user']['user_id'];
 
-// Fetch all orders for the current user
+// sql injections lol
 $stmt = $conn->prepare("
     SELECT o.*, 
            COUNT(oi.order_item_id) as total_items,
@@ -32,12 +32,13 @@ $result = $stmt->get_result();
 ?>
 
 <body>
+    <script src="../js/orders.js"></script>
     <header class="header">
         <img src="../assets/logo-header.png" id="nav_logo">
         <div class="header-right">
             <nav class="option-btns">
-                <a href="../index.php"> <i style="margin-right: 0.5rem;" class="bi bi-house"></i> Home</a>
-                <a href=""> <i style="margin-right: 0.5rem;" class="bi bi-person-lines-fill"></i>Contact Us</a>
+                <a href="../index.php"><i class="bi bi-house"></i> Home</a>
+                <a href="<?php echo getRootPath('contact'); ?>"><i class="bi bi-person-lines-fill"></i>Contact Us</a>
             </nav>
 
             <nav class="nav-btns">
@@ -108,7 +109,6 @@ $result = $stmt->get_result();
                                         Cancel Order
                                     </button>
                                 </div>
-
                             <?php endif; ?>
                         </div>
                     </div>
@@ -117,5 +117,4 @@ $result = $stmt->get_result();
         <?php endif; ?>
     </div>
 </body>
-
 </html>

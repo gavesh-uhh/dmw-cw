@@ -19,8 +19,8 @@ $products = getProducts();
             }
             ?>
             <nav class="option-btns">
-                <a href="../index.php"> <i style="margin-right: 0.5rem;" class="bi bi-house"></i> Home</a>
-                <a href=""> <i style="margin-right: 0.5rem;" class="bi bi-person-lines-fill"></i>Contact Us</a>
+                <a href="<?php echo getRootPath(path: 'index.php'); ?>"><i class="bi bi-house"></i> Home</a>
+                <a href="<?php echo getRootPath(path: 'contact'); ?>"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
             </nav>
 
             <nav class="nav-btns">

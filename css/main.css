@@ -105,6 +105,12 @@
     border-bottom: 3px solid transparent;
     border-radius: 3px;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.option-btns a i {
+    margin-right: 0.75rem;
 }
 
 .option-btns a:hover {
@@ -120,6 +126,8 @@
     background-color: var(--primary-light-red);
     border-radius: 15px;
     padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .nav-btns .icon {

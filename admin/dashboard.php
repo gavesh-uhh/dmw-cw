@@ -12,6 +12,38 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
     exit();
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_order'])) {
+    $order_id = filter_input(INPUT_POST, 'order_id', FILTER_SANITIZE_NUMBER_INT);
+    
+    if ($order_id) {
+        try {
+            $stmt = $conn->prepare("DELETE FROM order_item WHERE order_id = ?");
+            if (!$stmt) {
+                throw new Exception("[SQL:Error] Prepare failed: " . $conn->error);
+            }
+            $stmt->bind_param("i", $order_id);
+            $stmt->execute();
+
+            $stmt = $conn->prepare("DELETE FROM orders WHERE order_id = ?");
+            if (!$stmt) {
+                throw new Exception("Prepare failed: " . $conn->error);
+            }
+            $stmt->bind_param("i", $order_id);
+            
+            if ($stmt->execute()) {
+                $_SESSION['success'] = "Order successfully deleted!";
+                header('Location: dashboard.php');
+                exit();
+            } else {
+                throw new Exception("Failed to delete order: " . $stmt->error);
+            }
+        } catch (Exception $e) {
+            $_SESSION['error'] = $e->getMessage();
+            error_log("Database error: " . $e->getMessage());
+        }
+    }
+}
+
 $orders = getOrders();
 if ($orders === false) {
     $error_message = "Failed to fetch orders. Please try again later.";
@@ -54,12 +86,16 @@ try {
     <div class="admin-dashboard">
         <nav class="admin-nav">
             <div class="admin-nav-header">
-                <img src="../assets/logo-header.png" alt="Fried Frenzy" class="admin-logo">
+                <a href="<?php echo getRootPath('index.php'); ?>">
+                    <img src="<?php echo getRootPath('assets/logo-header.png'); ?>" alt="Fried Frenzy" class="admin-logo">
+                </a>
                 <h2>Admin Panel</h2>
             </div>
             <ul class="admin-nav-links">
                 <li class="active"><a href="dashboard.php"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
                 <li><a href="add_item.php"><i class="bi bi-plus-circle"></i> Add Item</a></li>
+                <li><a href="delete_item.php"><i class="bi bi-trash"></i> Delete Item</a></li>
+                <li><a href="feedback.php"><i class="bi bi-chat-dots"></i> View Feedback</a></li>
                 <li><a href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
             </ul>
         </nav>
@@ -154,6 +190,7 @@ try {
                                 <th>Customer</th>
                                 <th>Date</th>
                                 <th>Amount</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody id="orders-table-body">
@@ -175,6 +212,14 @@ try {
                                         <td><?php echo htmlspecialchars($order['user_id']); ?></td>
                                         <td><?php echo date('M d, Y', strtotime($order['order_date'])); ?></td>
                                         <td>Rs. <?php echo number_format($order['total_price'], 2); ?></td>
+                                        <td>
+                                            <form method="POST" class="delete-form" onsubmit="return confirmDelete(<?php echo $order['id']; ?>)">
+                                                <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
+                                                <button type="submit" name="delete_order" class="btn-danger">
+                                                    <i class="bi bi-trash"></i> Delete
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
@@ -190,6 +235,11 @@ try {
     </div>
 
     <script src="<?php echo getRootPath('js/admin/dashboard.js'); ?>"></script>
+    <script>
+        function confirmDelete(orderId) {
+            return confirm(`Are you sure you want to delete order #${orderId}? This action cannot be undone.`);
+        }
+    </script>
 </body>
 
 </html>
