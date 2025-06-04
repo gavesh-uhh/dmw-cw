@@ -73,13 +73,13 @@ function isNumeric($string) {
 }
 
 function getRootPath($path = '') {
-    $projectRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-    $currentScript = realpath($_SERVER['SCRIPT_FILENAME']);
-    $relativePath = str_replace($projectRoot, '', dirname($currentScript));
-    $relativePath = trim($relativePath, DIRECTORY_SEPARATOR);
-    $depth = substr_count($relativePath, DIRECTORY_SEPARATOR);
-    // keep the depth to 0
-    if ($depth === 0) return $path;
+    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $projectRoot = basename(dirname(__DIR__));
+    $baseUrl = $protocol . '://' . $host;
+    if ($projectRoot !== 'htdocs' && $projectRoot !== 'www' && $projectRoot !== 'public_html') {
+        $baseUrl .= '/' . $projectRoot;
+    }
     $path = trim($path, '/');
-    return str_repeat('../', $depth) . $path;
+    return $baseUrl . '/' . $path;
 }
