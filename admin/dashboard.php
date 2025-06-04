@@ -2,7 +2,7 @@
 session_start();
 include "../includes/utility.php";
 $page_title = 'Fried Frenzy • Admin Dashboard';
-$page_css = getRootPath('css/admin/dashboard.css');
+$page_css = 'admin/dashboard.css';
 include '../includes/header.php';
 include '../includes/db_connect.php';
 include '../includes/get_orders.php';

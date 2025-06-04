@@ -1,7 +1,7 @@
 <?php
 session_start();
 $page_title = 'Fried Frenzy • Admin Login';
-$page_css = 'admin.css';
+$page_css = 'admin/dashboard.css';
 require_once '../includes/db_connect.php';
 include '../includes/header.php';
 
