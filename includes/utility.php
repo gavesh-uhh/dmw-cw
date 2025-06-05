@@ -1,5 +1,6 @@
 <?php
 
+
 function formatPrice($price) {
     return 'Rs. ' . number_format($price, 2);
 }
@@ -72,10 +73,12 @@ function isNumeric($string) {
     return ctype_digit($string);
 }
 
+define('ROOT_DIR', '/fried-frenzy'); 
+
 function getRootPath($path = '') {
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'];
-    $baseUrl = $protocol . '://' . $host . '/fried-frenzy';
+    $baseUrl = $protocol . '://' . $host . ROOT_DIR;
     $path = trim($path, '/');
-    return $baseUrl . '/' . $path;
+    return $baseUrl . ($path ? '/' . $path : '');
 }
