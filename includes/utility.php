@@ -75,11 +75,7 @@ function isNumeric($string) {
 function getRootPath($path = '') {
     $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'];
-    $projectRoot = basename(dirname(__DIR__));
-    $baseUrl = $protocol . '://' . $host;
-    if ($projectRoot !== 'htdocs' && $projectRoot !== 'www' && $projectRoot !== 'public_html') {
-        $baseUrl .= '/' . $projectRoot;
-    }
+    $baseUrl = $protocol . '://' . $host . '/fried-frenzy';
     $path = trim($path, '/');
     return $baseUrl . '/' . $path;
 }
